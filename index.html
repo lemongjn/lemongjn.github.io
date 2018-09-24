@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>ks</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="1.css">
+      
+  	<audio autoplay="autoplay" hidden="true" loop="loop" preload="auto"
+            	src="周杰伦 - 最长的电影 [mqms2].mp3">
+      		
+	</audio>
+
+
+    </head>
+    <body>
+    	<header>
+    		<nav>
+    			<a href="" class="a1">国</a>
+    			<a href="" class="a2">小</a>
+    			<a href="" class="a3">楠</a>
+    		</nav>
+    	</header>
+    	<article>
+    		<section>
+    			<div id="clock-box">
+                    <span class="STYLE1"></span>
+                  <div id="clock"></div>
+              </div>
+    			<h1>相爱157天</h1>
+    			<div>
+
+
+    				<span>时间：</span>
+    				
+    				<time id="div_timer"></time>
+    			</div>
+    		</section>
+    		<aside>
+    			<div>
+    				<span>阅读全文</span>
+    				<a href="">A+</a>
+    				<a href="">A-</a>
+    				<a href="">A</a>
+    			</div>
+    		</aside>
+    		<div class="wenzhang">
+    			<h5><strong>我们的开始</strong></h5>
+    			<pre>
+    我想和你 赏最美的风景 
+        看最长的电影 听动人的旋律 
+        是因为你 
+        喔我 会陪你到下个世纪 
+        那是多么的幸运 
+        可爱的你 爱哭的你 
+        善良的你 美好的你 
+        和你一起 聊着过去 说起曾经 
+        那些画面都 是你	</pre>
+    			<h5><strong>是很长的电影</strong></h5>
+    			<pre>
+    你的单纯自成一个世界
+    	那里的云像暖烘烘的棉被
+    	空气里流动着纯度很高的无邪
+    	亲密纷飞午后的风像抱枕般容易入睡
+    	你的单纯自成一个世界
+    	爱情羽化成蝶恋人们觅食取之不尽的体贴
+    	温柔长满了旷野思念像森林般紧紧包围
+    	在誓言播种的季节转眼间厮守终生结实累累
+    	你的单纯自成一个世界
+    	人潮中爱透明的可以连续看穿好几个谁
+    			</pre>
+    			<h5><strong>开口的珍贵</strong></h5>
+    		<pre>
+    就像花属于花瓶 风属于风铃 
+	回忆 属于一封手写的信 
+	而离开前的落幕 属于台下的安静 
+	当故事里的结局 已经很接近 
+	此刻的阅读就该属于暖色系 带点恬静 
+	翻开书页的声音很软 很柔 很轻 
+	让所有曾经 在你的心里旅行 
+	让所有来告别的溪流 丘陵 以及森林 
+	合上书本后 压花成 停格的风景 
+	再也不会 伤心
+    			</pre>
+    		</div>
+    	</article>
+    	<footer>
+        <p class="weidi">中秋 | 十一 | 七夕 | 春节 | 元宵 | 端午 | 每年 | 所有日子</p>
+        <p>To be or not to be . </p>
+        <p>JUST FOR U  by：xiaolin同学</p>
+    </footer>
+
+<script>
+    	 var $ = function(sel) {
+        return document.querySelectorAll(sel);
+    };
+    var a = $('aside a');
+    a[0].onclick = function(e) {
+       $('article .wenzhang')[0].style.cssText = "font-size:18px";
+  return false;  }
+    a[1].onclick = function(e) {
+        $('article .wenzhang')[0].style.cssText = "font-size:9px";
+        return false;}
+        a[2].onclick = function(e) {
+        $('article .wenzhang')[0].style.cssText = "font-size:16px";
+        return false;
+    }
+//获取系统时间
+function showTime() {
+nowtime = new Date();
+year = nowtime.getFullYear();//年
+month = nowtime.getMonth() + 1;//月
+day = nowtime.getDate();//日
+hour = nowtime.getHours();//时
+minutes = nowtime.getMinutes(); //分
+seconds = nowtime.getSeconds(); //秒
+//文字增加空格
+document.getElementById("div_timer").style = "white-space:pre;";
+
+//显示时间
+document.getElementById("div_timer").innerText = year + "." + p(month) + "." + p(day) + " " + p(hour) + ":" + p(minutes) + ":" + p(seconds);
+}
+setInterval("showTime()", 1000);
+//月日时分秒小于10补0
+function p(s) {
+return s < 10 ? '0' + s : s;
+}
+  </script>	
+
+    </body>
+</html>
